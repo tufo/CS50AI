@@ -121,7 +121,7 @@ def shortest_path(source, target):
 
         # check whether the entire frontier is empty; call the .empty function.
         if frontier1.empty() == True:
-            return "There is no solution."
+            return "no path"
 
         # call the .remove function, which removes node from frontier, and also assigns that selected node to be the active node.
         current_node = frontier1.remove()
@@ -175,17 +175,6 @@ def shortest_path(source, target):
         # 43:18
 
         neighbors = neighbors_for_person(current_node.state) # this is a list of 2-tuples.
-
-        """
-        # Kevin Bacon: 102
-        # Demi Moore: 193
-        # A Few Good Men: 104257
-
-        print("person_id: ")
-        print(current_node.state)
-        print("Neighbors: ")
-        print(neighbors)
-        """
 
         # self.neighbors will return a 2-tuple of (action, state)
         # for loop: (action, state) is a 2-tuple corresponding to 
